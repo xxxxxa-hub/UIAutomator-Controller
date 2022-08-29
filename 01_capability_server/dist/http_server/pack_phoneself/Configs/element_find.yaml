@@ -1,0 +1,249 @@
+# coding=utf-8
+
+
+MobileBase:
+  'dial_pan': { info: '展开拨号键盘', type: 'xpath', typeValue: '//*[contains(@resource-id, "fab")][contains(@content-desc, "拨号")]' }
+  'dial_key': { type: 'xpath', typeValue: '//*[contains(@resource-id,":id/%s")]' }
+  'pan_dict': { '1': 'one', '2': 'two', '3': 'three', '4': 'four', '5': 'five', '6': 'six',
+        '7': 'seven', '8': 'eight', '9': 'nine', '0': 'zero', '*': 'star', '#': 'pound',
+        'dial': 'dial_icon' }
+  # 示波器应用平台页面元素
+  'airplane_mode_off': { info: '飞行模式关闭', type: 'xpath', typeValue: '//*[@text="关闭" and @content-desc="飞行模式"]' }
+  'airplane_mode_on': { info: '飞行模式开启', type: 'xpath', typeValue: '//*[@text="开启" and @content-desc="飞行模式"]' }
+  'TX_Test': { info: 'TX Test', type: 'xpath', typeValue: '//*[@text="TX Test"]' }
+  'GSM_checkbox': { info: 'GSM复选框', type: 'xpath', typeValue: '//*[@text="GSM"]/following-sibling::*[@resource-id="com.mediatek.engineermode:id/rat_status"]' }
+  'Test_Count': { info: 'Test Count输入框', type: 'xpath', typeValue: '//*[@resource-id="com.mediatek.engineermode:id/test_count"]' }
+  'START': { info: 'START按钮', type: 'xpath', typeValue: '//*[@text="START"]' }
+  'start_record': { info: '开始录音按钮', type: 'xpath', typeValue: '//*[@content-desc="开始录音"]' }
+  'oneplus_start_record': { info: '开始录音按钮', type: 'xpath', typeValue: '//*[@resource-id="com.oneplus.soundrecorder:id/coui_floating_button_main_fab"]' }
+  # 手机搬家
+  'phone_move_protocol': { info: '同意并使用按钮', type: 'xpath', typeValue: '//*[@text="同意并使用"]' }
+  'this_old': { info: '这是旧设备按钮', type: 'xpath', typeValue: '//*[@text="这是旧设备"]' }
+  'jurisdiction_allow': { info: '权限弹框_允许', type: 'xpath', typeValue: '//*[@text="允许"]' }
+  # 音乐
+  'music_protocol': { info: '音乐_用户须知', type: 'xpath', typeValue: '//*[@text="同意并继续"]' }
+  'music_Radio': { info: '音乐_音乐电台', type: 'xpath', typeValue: '//*[@text="音乐电台"]' }
+  'radio_music': { info: '音乐_电台音乐', type: 'xpath', typeValue: '//*[@resource-id="com.heytap.music:id/radio_tip_tv"]' }
+  'local_music': { info: '音乐_本地', type: 'xpath', typeValue: '//*[@resource-id="com.heytap.music:id/nav_local"]' }
+  'config_music': { info: '音乐_设置', type: 'xpath', typeValue: '//*[@resource-id="com.heytap.music:id/title_bar_action1_iv"]' }
+  'immediately_play': { info: '音乐_立即播放', type: 'xpath', typeValue: '//*[@resource-id="com.heytap.music:id/simple_dialog_confirm"]' }
+  'scan': { info: '扫描', type: 'xpath', typeValue: '//*[@resource-id="com.heytap.music:id/local_title_scan"]' }
+  'back': { info: '返回按钮', type: 'xpath', typeValue: '//*[@resource-id="com.android.systemui:id/back"]' }
+  # 优酷视频
+  'youku_protocol': { info: '优酷视频_温馨提示', type: 'xpath', typeValue: '//*[@resource-id="com.youku.phone:id/yk_dialog_yes"]' }
+  'youku_know': { info: '优酷视频_我知道了', type: 'xpath', typeValue: '//*[@text="我知道了"]' }
+  'youku_play': { info: '优酷视频_播放_猜你再追', type: 'xpath', typeValue: '//*[@resource-id="com.youku.phone:id/titles"]' }
+  'youku_update': { info: '优酷视频_更新提示_稍后', type: 'xpath', typeValue: '//*[@text="稍后"]' }
+  # 相机
+  'camera_location': { info: '使用位置信息权限', type: 'xpath', typeValue: '//*[@text="仅在使用该应用时允许"]' }
+  'camera_main': { info: '主摄像头', type: 'xpath', typeValue: '//*[@content-desc="后置摄像头"]' }
+  'camera_preposition': { info: '前置摄像头', type: 'xpath', typeValue: '//*[@content-desc="前置摄像头"]' }
+  'camera_wide_angle': { info: '广角摄像头', type: 'xpath', typeValue: '//*[@resource-id="com.oplus.camera:id/zoom_seek_bar_container"]' }
+  'x_wide_angle': { info: '0.6X倍广角', type: 'xpath', typeValue: '//*[@resource-id="com.oplus.camera:id/zoom_seek_bar_container"]' }
+  # 小布助手  text="0.6X"
+  'dialog_cancel': { info: '体验弹框_取消', type: 'xpath', typeValue: '//*[@resource-id="com.heytap.speechassist:id/guide_dialog_cancel"]' }
+  'config': { info: '小布助手_设置', type: 'xpath', typeValue: '//*[@resource-id="com.heytap.speechassist:id/menu_container_icon"]' }
+  'awaken': { info: '小布助手_设置_语音唤醒', type: 'xpath', typeValue: '//*[@text="语音唤醒"]' }
+  'continue': { info: '小布助手_设置_语音唤醒_继续', type: 'xpath', typeValue: '//*[@resource-id="com.heytap.speechassist:id/tv_continue"]' }
+  # 高通平台
+  'PA_play': { info: 'PA打功率', type: 'xpath', typeValue: '//*[@text="PA打功率"]' }
+  'GSM': { info: 'PA打功率页_GSM', type: 'xpath', typeValue: '//*[@text="GSM"]' }
+  'TX_ON': { info: 'PA打功率页_TX ON按钮', type: 'xpath', typeValue: '//*[@text="TX ON"]' }
+  'GET': { info: 'PA打功率页_GET按钮', type: 'xpath', typeValue: '//*[@text="GET"]' }
+  # Google音乐
+  'devices_file': { info: '谷歌音乐_仅设备文件', type: 'xpath', typeValue: '//*[@resource-id="com.google.android.apps.youtube.music:id/skip_button"]' }
+  'play_music': { info: '谷歌音乐_歌曲', type: 'xpath', typeValue: '//*[@text="歌曲"]' }
+  'white_noise': { info: '谷歌音乐_播放白噪声', type: 'xpath', typeValue: '//*[@text="0db_white_noise"]' }
+  # 传感器
+  'GSensor': { info: 'GSensor', type: 'xpath', typeValue: '//*[@resource-id="android:id/summary"]' }
+  'approach': { info: '接近功能测试', type: 'xpath', typeValue: '//*[@text="接近功能测试"]' }
+  'sensitization_sensor': { info: '感光sensor测试', type: 'xpath', typeValue: '//*[@text="感光sensor测试"]' }
+  # 射频测试工具
+  'pa_play': { info: 'PA打功率', type: 'xpath', typeValue: '//*[@text="PA打功率"]' }
+  'lte': { info: 'LTE', type: 'xpath', typeValue: '//*[@text="LTE"]' }
+  'band_select_box': { info: 'Band_下拉列表', type: 'xpath', typeValue: '//*[@resource-id="com.oplus.engineernetwork:id/lte_band_sel_spinner"]' }
+  'lte_b3': { info: 'Band_B3', type: 'xpath', typeValue: '//*[@text="LTE B3"]' }
+  'lte_b7': { info: 'Band_B7', type: 'xpath', typeValue: '//*[@text="LTE B7"]' }
+  'edit_power': { info: '功率输入文本框', type: 'xpath', typeValue: '//*[@resource-id="com.oplus.engineernetwork:id/edit_power"]' }
+
+# ' text="个性化定制" '
+  # 设置
+  'individuation': { info: '设置_个性化定制', type: 'xpath', typeValue: '//*[@text="个性化定制"]' }
+  'AOD': { info: '设置_个性化定制_息屏', type: 'xpath', typeValue: '//*[@text="息屏"]' }
+  'AOD_display': { info: '设置_个性化定制_息屏_息屏显示', type: 'xpath', typeValue: '//*[@text="关闭"][@resource-id="com.oplus.aod:id/aod_enable_switch"]'}
+  'system_set': { info: '设置_系统设置', type: 'xpath', typeValue: '//*[@text="系统设置"]' }
+  'spatial_gestures': { info: '设置_系统设置_手势体感', type: 'xpath', typeValue: '//*[@text="手势体感"]' }
+  'blankscreen_gestures': { info: '设置_系统设置_手势体感_黑屏手势', type: 'xpath', typeValue: '//*[@text="黑屏手势"]' }
+  'BSG_on': { info: '设置_系统设置_手势体感_黑屏手势_打开', type: 'xpath', typeValue: '//*[@text="黑屏手势"][@resource-id="android:id/title"]' }
+  'BSG_on_check': { info: '设置_系统设置_手势体感_黑屏手势_开关检测控件', type: 'xpath', typeValue: '//*[@text="开启"]' }
+  'double_click': { info: '设置_系统设置_手势体感_黑屏手势_开启_双击亮屏与息屏', type: 'xpath', typeValue: '//*[@text="双击亮屏与息屏"]' }
+
+SingleAction:
+
+  'normal_input': { info: '##', type: 'xpath', typeValue: '//*[contains(@content-desc, "##") or contains(@text, "##")]' }
+  'more_select': { info: '更多选项', type: 'xpath', typeValue: '//*[@content-desc="更多选项"]' }
+  'black_mode': { type: 'xpath', typeValue: '//*[@text = "%s" or @content-desc="%s"]' }
+  'click_label': { type: 'xpath', typeValue: '//*[@resource-id="android:id/title"][@text = "%s"]' }
+  'horizon_label': { type: 'xpath', typeValue: '//*[@content-desc= "%s"][@resource-id=""]' }
+  'click_text': { type: 'xpath', typeValue: '//*[@text = "%s" or @content-desc = "%s"]' }
+  'lefttag': { type: 'xpath', typeValue: '//*[@text="%s"]/..//*[@resource-id="android:id/text1"]' }
+  'rightvalue': { type: 'xpath', typeValue: '//*[@text="%s"][@resource-id="android:id/text1"]' }
+  'setting_engineer_mode': { info: '工程模式路径-%s', type: 'xpath', typeValue: '//*[@resource-id="com.mediatek.engineermode:id/pagertitle"]/child::*[@text="%s"]' }
+  'white_page_titles': { info: 'EngineerMode-titles', type: 'xpath', typeValue: '//*[@resource-id="com.mediatek.engineermode:id/pagertitle"]/child::*' }
+  'input_right_value': { type: 'xpath', typeValue: '//*[@text="%s"]/following-sibling::*' }
+  'input_left_value': { type: 'xpath', typeValue: '//*[@text="%s"]/preceding-sibling::*' }
+  'mtk_tx_test': { info: 'Tx', type: 'xpath', typeValue: '//*[@text="Tx"]' }
+
+  '所有非空元素': { info: 'text属性非空集合', type: 'xpath', typeValue: '//*[contains(@resource-id,":id/")][@text != ""][1]' }
+
+  'Charger': { info: '普通充电器', type: 'xpath', typeValue: '//*[@text !=""][@resource-id=""][./following-sibling::*[@resource-id != ""]]' }
+  'ChargerValue': { type: 'xpath', typeValue: '//*[@resource-id != ""][./preceding-sibling::*[@text="%s"]]' }
+  'EngineerMode':
+    info: 'page title->%s'
+    MTK: { type: 'xpath', typeValue: '//*[@resource-id="com.mediatek.engineermode:id/pagertitle"]/child::*[@text="%s"]' }
+    Qualcomm: { type: 'xpath', typeValue: '//*[@resource-id="com.oplus.engineermode:id/tab"]/*/child::*/*[@text="%s"]' }
+
+  '工程模式':
+    info: 'page title'
+    MTK: { type: 'xpath', typeValue: '//*[@resource-id=""][@text != ""][@text != "工程模式"]' }
+    Qualcomm: { type: 'xpath', typeValue: '//*[@resource-id="com.oplus.engineermode:id/tab"]/*/child::*/*' }
+
+  黑名单:
+    { 'Please select Allow all the time in Settings': 'OK', '允许': [ '仅在使用该应用时允许', '允许' ],
+      'Please make sure': 'OK', '手机进入FTM': '确定', '信令测试卡槽': 'OK' }
+
+
+SearchStar:
+  '菜单按钮': { type: 'xpath', typeValue: '//*[@text = "OppoGnssTools"]/../*[1]' }
+  'GPS信号强度': { type: 'xpath', typeValue: '//*[@text = "GPS信号强度"]' }
+  '开始测试': { type: 'xpath', typeValue: '//*[@text="开始测试"]' }
+  '测试项': { type: 'xpath', typeValue: '//*[contains(@text, "%s")]/following-sibling::*' }
+  '定位服务': { type: 'xpath', typeValue: '//*[starts-with(@content-desc, "定位服务")][@text != ""]' }
+  '位置报告': { type: 'xpath', typeValue: '//*[starts-with(@content-desc, "位置")]' }
+  '关闭': { type: 'xpath', typeValue: '//*[@text = "关闭"]' }
+  '度娘搜路线': { type: 'resourceId', typeValue: 'com.baidu.BaiduMap:id/home_route_btn' }
+  '百度驾车': { type: 'xpath', typeValue: '//*[@text="驾车"]' }
+  '百度我的位置': { type: 'resourceId', typeValue: 'com.baidu.BaiduMap:id/route_search_input_start_text' }
+  '百度输入终点': { type: 'resourceId', typeValue: 'com.baidu.BaiduMap:id/route_search_input_end_text' }
+  '度娘输入起点': { type: 'resourceId', typeValue: 'com.baidu.BaiduMap:id/route_search_input_start_text' }
+  '丰台区火车站': { type: 'xpath', typeValue: '//*[@resource-id="com.baidu.BaiduMap:id/l1c2"]/../*[@text = "火车站"]' }
+  '度娘输入终点': { type: 'xpath', typeValue: '//*[@resource-id="com.baidu.BaiduMap:id/route_search_input_end_text"]' }
+  '上海火车站-地铁站': { type: 'xpath', typeValue: '//*[@resource-id="com.baidu.BaiduMap:id/title"][@text = "上海火车站-地铁站"]' }
+  '度娘开始导航': { type: 'resourceId', typeValue: 'com.baidu.BaiduMap:id/to_pro_nav' }
+  '百度地图导航使用提示': { type: 'resourceId', typeValue: 'com.baidu.BaiduMap:id/bnav_declare_agree' }
+  '退出': { type: 'resourceId', typeValue: 'com.baidu.BaiduMap:id/bnav_rg_bottombar_exit_btn' }
+  '德子驾车': { type: 'xpath', typeValue: '//*[@text="驾车"]' }
+  '我的位置': { type: 'resourceId', typeValue: 'com.autonavi.minimap:id/route_edit_start_text' }
+  '我的位置绿': { type: 'text', typeValue: '我的位置' }
+  '天安门': { type: 'xpath', typeValue: '//*[@text="天安门"]' }
+  '德子输入终点': { type: 'xpath', typeValue: '//*[@text="输入终点"]' }
+  '上海迪士尼度假区检票口': { type: 'xpath', typeValue: '//*[contains(@text, "上海迪士尼度假区")][contains(@text, "检票口")]' }
+  '模拟导航': { type: 'xpath', typeValue: '//*[@text="模拟导航"]/..' }
+  '德子暂停': { type: 'xpath', typeValue: '//*[@text="暂停"]' }
+  '跟踪测试': { type: 'xpath', typeValue: '//*[@text = "跟踪测试"]' }
+  'Gnss开始测试': { type: 'text', typeValue: '开始测试' }
+  '允许通知开关': { type: 'xpath', typeValue: '//*[@resource-id="android:id/switch_widget"]' }
+  '三方地图测试': { type: 'resourceId', typeValue: 'com.locationtest.gnsshelper:id/button_map' }
+  '停止测试': { type: 'resourceId', typeValue: 'com.locationtest.gnsshelper:id/button_stop' }
+  '保存开关': { type: 'resourceId', typeValue: 'com.locationtest.gnsshelper:id/switch_debug_report' }
+
+  黑名单:
+    { '跳过': '跳过', '是否继续上次导航': '取消', '感谢您使用百度地图': '同意',
+      '需要使用位置信息权限': '使用时允许', 'guide_img': 'guide_close', '开启推送通知': '以后再说', }
+
+NFC:
+  '安装': { type: 'xpath', typeValue: '//*[@resource-id = "android:id/button1"][@text = "安装"]' }
+  '恩智浦': { type: 'xpath', typeValue: '//*[starts-with(@text, "恩智浦NFC TagWriter")]' }
+  '我接受': { type: 'xpath', typeValue: '//*[@text = "我接受"]' }
+  '栏位名称': { type: 'xpath', typeValue: '//*[@text = "%s"]' }
+  '开发者模式': { type: 'xpath', typeValue: '//*[@text = "开发者模式"]' }
+  '读取模式': { type: 'xpath', typeValue: '//*[@text="将标签置于手机背面"]' }
+  '文本信息输入框': { type: 'xpath', typeValue: '//*[@resource-id="com.fangka.nfcapp:id/text"]' }
+  '下一步': { type: 'xpath', typeValue: '//*[@resource-id="com.fangka.nfcapp:id/next_button"]' }
+  '追加模式': { type: 'xpath', typeValue: '//*[@resource-id="com.fangka.nfcapp:id/write_tag_append"]' }
+  '保存结果': { type: 'xpath', typeValue: '//*[@resource-id="com.fangka.nfcapp:id/write_tag_record"]' }
+  '完成': { type: 'xpath', typeValue: '//*[@resource-id="com.fangka.nfcapp:id/finish_button"]' }
+  '读写切换按钮': { type: 'xpath', typeValue: '//*[starts-with(@text, "进入")]' }
+  '返回': { type: 'xpath', typeValue: '//*[@resource-id="com.android.systemui:id/back"]' }
+  #  '初启弹窗': { type: 'xpath', typeValue: '//*[starts-with(@text,"NFC应用")]/../../..//*[@text="确定"]' }
+  '新标签已收集': { type: 'xpath', typeValue: '//*[@text = "新标签已收集"]' }
+  '所有标签内容': { type: 'xpath', typeValue: '//*[@resource-id="com.android.apps.tag:id/list"]/child::*[@text != ""]' }
+  黑名单:
+    {'NFC应用': '确定'}
+
+QuickSet:
+  '非空元素': { type: 'xpath', typeValue: '//*[@text != ""]' }
+  'WLAN': { type: 'xpath', typeValue: '//*[starts-with(@content-desc, "WLAN")]' }
+  '飞行模式': { type: 'xpath', typeValue: '//*[@content-desc="飞行模式"]' }
+
+Settings:
+  '搜索设置项': { type: 'xpath', typeValue: '//*[@resource-id="com.android.settings:id/animated_hint"]' }
+  '选择搜索结果': { type: 'xpath', typeValue: '//*[@resource-id="android:id/title"][@text="%s"]' }
+  '定时开关机': { type: 'xpath', typeValue: '//*[@text="定时开关机"][@resource-id="android:id/title"]' }
+  '开机时间': { type: 'xpath', typeValue: '//*[@text="每天"]/preceding-sibling::*' }
+  '定时开始开关': { type: 'xpath', typeValue: '//*[@resource-id="com.android.settings:id/switchWidget"]' }
+  '分钟滚轮': { type: 'resourceId', typeValue: 'com.android.settings:id/minute_layout' }
+  '时间轮盘': { type: 'resourceId', typeValue: 'com.android.settings:id/time_picker_layout' }
+  '保存选择': { type: 'resourceId', typeValue: 'com.android.settings:id/menu_complete' }
+  '触碰付款': { type: 'text', typeValue: '触碰付款' }
+  '默认付款应用': { type: 'text', typeValue: '%s' }
+  '左上返回键': { type: 'resourceId', typeValue: 'com.android.systemui:id/back' }
+  '个人热点设置': { type: 'text', typeValue: '个人热点设置' }
+  '名称密码': { type: 'xpath', typeValue: '//*[@text="%s"]/following-sibling::*/*' }
+  '删除': { type: 'xpath', typeValue: '//*[@text="%s"]/following-sibling::*/*/*' }
+  '收起安全键盘': { type: 'resourceId', typeValue: 'com.oplus.securitykeyboard:id/coui_keyboard_view_close' }
+  'WLAN名称': { type: 'xpath', typeValue: '//*[contains(@text, "%s") or contains(@content-desc, "%s")]' }
+  '音乐.录音': { type: 'xpath', typeValue: '//*[@resource-id="com.android.settings:id/viewPager_tab_layout"]//*[@text="%s"]' }
+  '音频名称': { type: 'xpath', typeValue: '//*[@resource-id="com.android.settings:id/title_tv"][@text="%s"]' }
+
+PhoneSide:
+  '下一曲': { type: 'description', typeValue: '下一曲' }
+  '视频进度': { type: 'resourceId', typeValue: 'com.heytap.yoli:id/progress' }
+  '视频播放': { type: 'resourceId', typeValue: 'com.heytap.yoli:id/btn_play' }
+  '视频暂停': { type: 'resourceId', typeValue: 'com.heytap.yoli:id/btn_pause' }
+  'QQ音乐首页': { type: 'text', typeValue: "首页" }
+  'QQ音乐我的': { type: 'text', typeValue: "我的" }
+  'QQ音乐本地': { type: 'text', typeValue: "本地" }
+  '选择本地音频': { type: 'text', typeValue: '%s' }
+  'QQ音乐进度': { type: 'resourceId', typeValue: 'com.tencent.qqmusic:id/eyv' }
+
+  '歌曲队列':
+    MTK: {type: 'xpath', typeValue: '//*[@content-desc="歌曲队列"]'}
+    Qualcomm: {type: 'xpath', typeValue: '//*[@content-desc="歌曲队列"]'}
+  队列清空:
+    MTK: {type: 'xpath', typeValue: '//*[@content-desc="清空"]'}
+    Qualcomm: {type: 'xpath', typeValue: '//*[@content-desc="清空"]'}
+  弹窗提示:
+    MTK: { type: 'text', typeValue: '确定'}
+    Qualcomm: { type: 'text', typeValue: '确定' }
+  'QQ音乐跳过': { type: 'text', typeValue: "跳过" }
+  '上一曲': { type: 'description', typeValue: '上一曲' }
+  'QQ音乐工作栏': { type: 'xpath', typeValue: '//*[contains(@text, "- 未知")]' }
+  '歌曲名称展示': { type: 'text', typeValue: '%s' }
+  '播放/暂停': { type: 'xpath', typeValue: '//*[@content-desc="暂停" or @content-desc="播放"]' }
+  '打开音乐播放': { type: 'text', typeValue: "打开音乐播放" }
+  '显示控制按钮': { type: 'resourceId', typeValue: 'com.heytap.yoli:id/rl_all_controller' }
+  '视频控制区': { type: 'xpath', typeValue: '//*[@resource-id="com.heytap.yoli:id/control_area"]/*' }
+
+  '开始录音': { type: 'resourceId', typeValue: 'com.coloros.soundrecorder:id/middle_control' }
+  'OPPO录像按钮': { type: 'xpath', typeValue: '//*[@resource-id="com.oppo.camera:id/shutter_button"][@content-desc="录像按钮"]' }
+  'OPPO相机菜单': { type: 'xpath', typeValue: '//*[@resource-id="com.oppo.camera:id/control_panel_layout"]/*' }
+  '停止录音': { type: 'resourceId', typeValue: 'com.coloros.soundrecorder:id/right_stop_control' }
+  '保存录音': { type: 'resourceId', typeValue: 'com.coloros.soundrecorder:id/menu_save' }
+  '名称输入': { type: 'xpath', typeValue: '//*[contains(@text, "标准录音")]' }
+  '录音文件列表': { type: 'resourceId', typeValue: 'com.coloros.soundrecorder:id/text0' }
+
+  '手机存储': {type: 'text', typeValue: '手机存储'}
+  '音频文件夹': {type: 'text', typeValue: 'audioTest'}
+  '音频名称': {type: 'text', typeValue: '%s'}
+  '文件导航栏选择': {type: 'text', typeValue: '更多'}
+  '导航栏打开方式': {type: 'text', typeValue: '其他方式打开'}
+  '其他打开方式': {type: 'text', typeValue: 'QQ音乐'}
+
+  '等待接听':
+    MTK: {type: 'text', typeValue: '正在等待对方接听电话'}
+    Qualcomm: { type: 'text', typeValue: '正在呼叫...' }
+
+  黑名单:
+    { "跳过": "跳过", "用户协议": "同意", "添加至桌面": "取消", "第三方信息共享": "取消", "权限申请": "确定", "存储空间权限": "允许",
+      "同意并使用": "同意并使用", "麦克风权限": "使用时允许", "点击可切换至会议、采访模式": "无相关撤销动作" }
